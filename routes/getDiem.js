@@ -50,7 +50,7 @@ Router.post('/', (req, res) => {
                     res.status(200).json({
                         "messages": [
                           {
-                            "text": "Lỗi truy vấn"
+                            "text": "Server đang cập nhật."
                           }
                         ]
                       })
@@ -102,7 +102,7 @@ Router.post('/', (req, res) => {
                     res.status(200).json({
                         "messages": [
                           {
-                            "text": "Lỗi truy vấn"
+                            "text": "Server đang cập nhật."
                           }
                         ]
                       })
@@ -155,7 +155,7 @@ Router.post('/', (req, res) => {
                     res.status(200).json({
                         "messages": [
                           {
-                            "text": "Lỗi truy vấn"
+                            "text": "Server đang cập nhật."
                           }
                         ]
                       })
@@ -208,7 +208,7 @@ Router.post('/', (req, res) => {
                     res.status(200).json({
                         "messages": [
                           {
-                            "text": "Lỗi truy vấn"
+                            "text": "Server đang cập nhật."
                           }
                         ]
                       })
@@ -261,7 +261,7 @@ Router.post('/', (req, res) => {
                     res.status(200).json({
                         "messages": [
                           {
-                            "text": "Lỗi truy vấn"
+                            "text": "Server đang cập nhật."
                           }
                         ]
                       })
@@ -314,7 +314,7 @@ Router.post('/', (req, res) => {
                     res.status(200).json({
                         "messages": [
                           {
-                            "text": "Lỗi truy vấn"
+                            "text": "Server đang cập nhật."
                           }
                         ]
                       })
@@ -367,7 +367,7 @@ Router.post('/', (req, res) => {
                     res.status(200).json({
                         "messages": [
                           {
-                            "text": "Lỗi truy vấn"
+                            "text": "Server đang cập nhật."
                           }
                         ]
                       })
