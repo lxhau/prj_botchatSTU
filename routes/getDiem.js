@@ -66,7 +66,7 @@ Router.post('/', (req, res) => {
                   })
             }
             
-        }else if (kql == "3"){
+        }else if (kql == "3" || kql == "4"){
             /// Điện
             if(khoahoc =="17" || khoahoc =="18" || khoahoc =="19"){
                 mysql.query(`SELECT * FROM dd${khoahoc} WHERE COLUMN2 = ?`,[post_data.idStudent],(err, rows)=>{
