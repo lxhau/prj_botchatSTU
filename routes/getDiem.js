@@ -16,8 +16,8 @@ Router.post('/', (req, res) => {
     // console.log(khoahoc);
         if(kql == "1"){
             /// Cơ điện tử
-            if(khoahoc =="17" || khoahoc =="18" || khoahoc =="19" || khoahoc =="20"){
-                mysql.query(`SELECT * FROM ck${khoahoc} WHERE COLUMN2 = "?"`,[post_data.idStudent],(err, rows)=>{
+            if(khoahoc =="17" || khoahoc =="18" || khoahoc =="19"){
+                mysql.query(`SELECT * FROM ck${khoahoc} WHERE COLUMN2 = ?`,[post_data.idStudent],(err, rows)=>{
                 if(!err){
                     if(rows.length>0){
                        //sendMessage(post_data.userId, rows[0])
@@ -68,8 +68,8 @@ Router.post('/', (req, res) => {
             
         }else if (kql == "3" || kql == "4"){
             /// Điện
-            if(khoahoc =="17" || khoahoc =="18" || khoahoc =="19"|| khoahoc =="20"){
-                mysql.query(`SELECT * FROM dd${khoahoc} WHERE COLUMN2 = "?"`,[post_data.idStudent],(err, rows)=>{
+            if(khoahoc =="17" || khoahoc =="18" || khoahoc =="19"){
+                mysql.query(`SELECT * FROM dd${khoahoc} WHERE COLUMN2 = ?`,[post_data.idStudent],(err, rows)=>{
                 if(!err){
                     if(rows.length>0){
                        //sendMessage(post_data.userId, rows[0])
@@ -121,8 +121,8 @@ Router.post('/', (req, res) => {
 
         }else if (kql == "5"){
             /// Công nghệ thông tin
-            if(khoahoc =="17" || khoahoc =="18" || khoahoc =="19"|| khoahoc =="20"){
-                mysql.query(`SELECT * FROM cntt${khoahoc} WHERE COLUMN2 = "?"`,[post_data.idStudent],(err, rows)=>{
+            if(khoahoc =="17" || khoahoc =="18" || khoahoc =="19"){
+                mysql.query(`SELECT * FROM cntt${khoahoc} WHERE COLUMN2 = ?`,[post_data.idStudent],(err, rows)=>{
                 if(!err){
                     if(rows.length>0){
                        //sendMessage(post_data.userId, rows[0])
@@ -174,8 +174,8 @@ Router.post('/', (req, res) => {
 
         }else if (kql == "6"){
             /// Thực phẩm
-            if(khoahoc =="17" || khoahoc =="18" || khoahoc =="19"|| khoahoc =="20"){
-                mysql.query(`SELECT * FROM tp${khoahoc} WHERE COLUMN2 = "?"`,[post_data.idStudent],(err, rows)=>{
+            if(khoahoc =="17" || khoahoc =="18" || khoahoc =="19"){
+                mysql.query(`SELECT * FROM tp${khoahoc} WHERE COLUMN2 = ?`,[post_data.idStudent],(err, rows)=>{
                 if(!err){
                     if(rows.length>0){
                        //sendMessage(post_data.userId, rows[0])
@@ -227,8 +227,8 @@ Router.post('/', (req, res) => {
 
         }else if (kql == "7"){
             /// Quản trị
-            if(khoahoc =="17" || khoahoc =="18" || khoahoc =="19"|| khoahoc =="20"){
-                mysql.query(`SELECT * FROM kd${khoahoc} WHERE COLUMN2 = "?"`,[post_data.idStudent],(err, rows)=>{
+            if(khoahoc =="17" || khoahoc =="18" || khoahoc =="19"){
+                mysql.query(`SELECT * FROM kd${khoahoc} WHERE COLUMN2 = ?`,[post_data.idStudent],(err, rows)=>{
                 if(!err){
                     if(rows.length>0){
                        //sendMessage(post_data.userId, rows[0])
@@ -280,8 +280,8 @@ Router.post('/', (req, res) => {
 
         }else if (kql == "8"){
             /// Kỹ thuật công trình
-            if(khoahoc =="17" || khoahoc =="18" || khoahoc =="19"|| khoahoc =="20"){
-                mysql.query(`SELECT * FROM xd${khoahoc} WHERE COLUMN2 = "?"`,[post_data.idStudent],(err, rows)=>{
+            if(khoahoc =="17" || khoahoc =="18" || khoahoc =="19"){
+                mysql.query(`SELECT * FROM xd${khoahoc} WHERE COLUMN2 = ?`,[post_data.idStudent],(err, rows)=>{
                 if(!err){
                     if(rows.length>0){
                        //sendMessage(post_data.userId, rows[0])
@@ -333,8 +333,8 @@ Router.post('/', (req, res) => {
 
         }else if (kql == "9"){
             /// Des
-            if(khoahoc =="17" || khoahoc =="18" || khoahoc =="19"|| khoahoc =="20"){
-                mysql.query(`SELECT * FROM des${khoahoc} WHERE COLUMN2 = "?"`,[post_data.idStudent],(err, rows)=>{
+            if(khoahoc =="17" || khoahoc =="18" || khoahoc =="19"){
+                mysql.query(`SELECT * FROM des${khoahoc} WHERE COLUMN2 = ?`,[post_data.idStudent],(err, rows)=>{
                 if(!err){
                     if(rows.length>0){
                        //sendMessage(post_data.userId, rows[0])
