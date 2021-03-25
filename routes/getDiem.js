@@ -7,6 +7,7 @@ const getkhoahoc = require('../ham/getkhoahoc');
 const request = require('request');
 
 Router.post('/', (req, res) => {
+
     var post_data = req.body;
     let kq = check(post_data.idStudent);
     if(kq == true){
@@ -17,14 +18,14 @@ Router.post('/', (req, res) => {
         if(kql == "1"){
             /// Cơ điện tử
             if(khoahoc =="17" || khoahoc =="18" || khoahoc =="19" || khoahoc =="20"){
-                mysql.query(`SELECT * FROM CK${khoahoc} WHERE COLUMN2 = "?"`,[post_data.idStudent],(err, rows)=>{
+                mysql.query(`SELECT * FROM CK${khoahoc} WHERE COLUMN2 = ?`,[post_data.idStudent],(err, rows)=>{
                 if(!err){
                     if(rows.length>0){
                        //sendMessage(post_data.userId, rows[0])
                        res.status(200).json({
                         "messages": [
                           {
-                            "text": 
+                            "text":
                             "💳 MSSV: "+ rows[0].Column2 + "\n"+
                             "📕 Sinh Viên: " + rows[0].Column3+ " "+ rows[0].Column4 + "\n"+
                             "Lớp: " + rows[0].Column5 + "\n"+ "\n" +
@@ -65,11 +66,11 @@ Router.post('/', (req, res) => {
                     ]
                   })
             }
-            
+
         }else if (kql == "3" || kql == "4"){
             /// Điện
             if(khoahoc =="17" || khoahoc =="18" || khoahoc =="19" || khoahoc =="20"){
-                mysql.query(`SELECT * FROM DD${khoahoc} WHERE COLUMN2 = "?"`,[post_data.idStudent],(err, rows)=>{
+                mysql.query(`SELECT * FROM DD${khoahoc} WHERE COLUMN2 = ?`,[post_data.idStudent],(err, rows)=>{
                 if(!err){
                     if(rows.length>0){
                        //sendMessage(post_data.userId, rows[0])
@@ -117,12 +118,12 @@ Router.post('/', (req, res) => {
                     ]
                   })
             }
-            
+
 
         }else if (kql == "5"){
             /// Công nghệ thông tin
             if(khoahoc =="17" || khoahoc =="18" || khoahoc =="19" || khoahoc =="20"){
-                mysql.query(`SELECT * FROM CNTT${khoahoc} WHERE COLUMN2 = "?"`,[post_data.idStudent],(err, rows)=>{
+                mysql.query(`SELECT * FROM CNTT${khoahoc} WHERE COLUMN2 = ?`,[post_data.idStudent],(err, rows)=>{
                 if(!err){
                     if(rows.length>0){
                        //sendMessage(post_data.userId, rows[0])
@@ -170,12 +171,12 @@ Router.post('/', (req, res) => {
                     ]
                   })
             }
-            
+
 
         }else if (kql == "6"){
             /// Thực phẩm
             if(khoahoc =="17" || khoahoc =="18" || khoahoc =="19" || khoahoc =="20"){
-                mysql.query(`SELECT * FROM TP${khoahoc} WHERE COLUMN2 = "?"`,[post_data.idStudent],(err, rows)=>{
+                mysql.query(`SELECT * FROM TP${khoahoc} WHERE COLUMN2 = ?`,[post_data.idStudent],(err, rows)=>{
                 if(!err){
                     if(rows.length>0){
                        //sendMessage(post_data.userId, rows[0])
@@ -223,12 +224,12 @@ Router.post('/', (req, res) => {
                     ]
                   })
             }
-            
+
 
         }else if (kql == "7"){
             /// Quản trị
             if(khoahoc =="17" || khoahoc =="18" || khoahoc =="19" || khoahoc =="20"){
-                mysql.query(`SELECT * FROM KD${khoahoc} WHERE COLUMN2 = "?"`,[post_data.idStudent],(err, rows)=>{
+                mysql.query(`SELECT * FROM KD${khoahoc} WHERE COLUMN2 = ?`,[post_data.idStudent],(err, rows)=>{
                 if(!err){
                     if(rows.length>0){
                        //sendMessage(post_data.userId, rows[0])
@@ -276,12 +277,12 @@ Router.post('/', (req, res) => {
                     ]
                   })
             }
-            
+
 
         }else if (kql == "8"){
             /// Kỹ thuật công trình
             if(khoahoc =="17" || khoahoc =="18" || khoahoc =="19" || khoahoc =="20"){
-                mysql.query(`SELECT * FROM XD${khoahoc} WHERE COLUMN2 = "?"`,[post_data.idStudent],(err, rows)=>{
+                mysql.query(`SELECT * FROM XD${khoahoc} WHERE COLUMN2 = ?`,[post_data.idStudent],(err, rows)=>{
                 if(!err){
                     if(rows.length>0){
                        //sendMessage(post_data.userId, rows[0])
@@ -329,12 +330,11 @@ Router.post('/', (req, res) => {
                     ]
                   })
             }
-            
 
         }else if (kql == "9"){
             /// Des
             if(khoahoc =="17" || khoahoc =="18" || khoahoc =="19" || khoahoc =="20"){
-                mysql.query(`SELECT * FROM Des${khoahoc} WHERE COLUMN2 = "?"`,[post_data.idStudent],(err, rows)=>{
+                mysql.query(`SELECT * FROM Des${khoahoc} WHERE COLUMN2 = ?`,[post_data.idStudent],(err, rows)=>{
                 if(!err){
                     if(rows.length>0){
                        //sendMessage(post_data.userId, rows[0])
@@ -382,8 +382,6 @@ Router.post('/', (req, res) => {
                     ]
                   })
             }
-            
-
         }else{
             res.status(200).json({
                 "messages": [
