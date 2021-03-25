@@ -6,6 +6,7 @@ const getkhoa = require('../ham/getKhoa');
 const getkhoahoc = require('../ham/getkhoahoc');
 const request = require('request');
 
+
 Router.post('/', (req, res) => {
 
     var post_data = req.body;
@@ -153,6 +154,7 @@ Router.post('/', (req, res) => {
                           })
                     }
                 }else{
+                  console.log(err);
                     res.status(200).json({
                         "messages": [
                           {

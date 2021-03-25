@@ -1,6 +1,7 @@
 let mysql = require('mysql');
 
     let connection = mysql.createConnection({
+      multipleStatements: true,
       host: 'db4free.net',
       user: 'huxle99',
       password: 'Fsb.Uwnjkg7!d7S',
