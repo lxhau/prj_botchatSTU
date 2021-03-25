@@ -32,7 +32,7 @@ Router.post('/', (req, res) => {
                             "Điểm tích lũy: " + rows[0].Column35 +"\n"+
                             "Môn học tích lũy: " + rows[0].Column37 + " Môn học" +"\n" +
                             "Tín chỉ tích lũy: " + rows[0].Column36 + " Tín chỉ" + "\n" + "\n" +
-                            "Kết Quả Được Cập Nhật Lần Cuối Ngày 14/09/2020, Lưu ý chỉ mang tính chất tham khảo"
+                            "Kết Quả Được Cập Nhật Lần Cuối Ngày 25/03/2021, Lưu ý chỉ mang tính chất tham khảo"
                           }
                         ]
                       })
@@ -84,7 +84,7 @@ Router.post('/', (req, res) => {
                             "Điểm tích lũy: " + rows[0].Column35 +"\n"+
                             "Môn học tích lũy: " + rows[0].Column37 + " Môn học" +"\n" +
                             "Tín chỉ tích lũy: " + rows[0].Column36 + " Tín chỉ" + "\n" + "\n" +
-                            "Kết Quả Được Cập Nhật Lần Cuối Ngày 14/09/2020, Lưu ý chỉ mang tính chất tham khảo"
+                            "Kết Quả Được Cập Nhật Lần Cuối Ngày 25/03/2021, Lưu ý chỉ mang tính chất tham khảo"
                           }
                         ]
                       })
@@ -137,7 +137,7 @@ Router.post('/', (req, res) => {
                             "Điểm tích lũy: " + rows[0].Column35 +"\n"+
                             "Môn học tích lũy: " + rows[0].Column37 + " Môn học" +"\n" +
                             "Tín chỉ tích lũy: " + rows[0].Column36 + " Tín chỉ" + "\n" + "\n" +
-                            "Kết Quả Được Cập Nhật Lần Cuối Ngày 14/09/2020, Lưu ý chỉ mang tính chất tham khảo"
+                            "Kết Quả Được Cập Nhật Lần Cuối Ngày 25/03/2021, Lưu ý chỉ mang tính chất tham khảo"
                           }
                         ]
                       })
@@ -190,7 +190,7 @@ Router.post('/', (req, res) => {
                             "Điểm tích lũy: " + rows[0].Column35 +"\n"+
                             "Môn học tích lũy: " + rows[0].Column37 + " Môn học" +"\n" +
                             "Tín chỉ tích lũy: " + rows[0].Column36 + " Tín chỉ" + "\n" + "\n" +
-                            "Kết Quả Được Cập Nhật Lần Cuối Ngày 14/09/2020, Lưu ý chỉ mang tính chất tham khảo"
+                            "Kết Quả Được Cập Nhật Lần Cuối Ngày 25/03/2021, Lưu ý chỉ mang tính chất tham khảo"
                           }
                         ]
                       })
@@ -243,7 +243,7 @@ Router.post('/', (req, res) => {
                             "Điểm tích lũy: " + rows[0].Column35 +"\n"+
                             "Môn học tích lũy: " + rows[0].Column37 + " Môn học" +"\n" +
                             "Tín chỉ tích lũy: " + rows[0].Column36 + " Tín chỉ" + "\n" + "\n" +
-                            "Kết Quả Được Cập Nhật Lần Cuối Ngày 14/09/2020, Lưu ý chỉ mang tính chất tham khảo"
+                            "Kết Quả Được Cập Nhật Lần Cuối Ngày 25/03/2021, Lưu ý chỉ mang tính chất tham khảo"
                           }
                         ]
                       })
@@ -296,7 +296,7 @@ Router.post('/', (req, res) => {
                             "Điểm tích lũy: " + rows[0].Column35 +"\n"+
                             "Môn học tích lũy: " + rows[0].Column37 + " Môn học" +"\n" +
                             "Tín chỉ tích lũy: " + rows[0].Column36 + " Tín chỉ" + "\n" + "\n" +
-                            "Kết Quả Được Cập Nhật Lần Cuối Ngày 14/09/2020, Lưu ý chỉ mang tính chất tham khảo"
+                            "Kết Quả Được Cập Nhật Lần Cuối Ngày 25/03/2021, Lưu ý chỉ mang tính chất tham khảo"
                           }
                         ]
                       })
@@ -349,7 +349,7 @@ Router.post('/', (req, res) => {
                             "Điểm tích lũy: " + rows[0].Column35 +"\n"+
                             "Môn học tích lũy: " + rows[0].Column37 + " Môn học" +"\n" +
                             "Tín chỉ tích lũy: " + rows[0].Column36 + " Tín chỉ" + "\n" + "\n" +
-                            "Kết Quả Được Cập Nhật Lần Cuối Ngày 14/09/2020, Lưu ý chỉ mang tính chất tham khảo"
+                            "Kết Quả Được Cập Nhật Lần Cuối Ngày 25/03/2021, Lưu ý chỉ mang tính chất tham khảo"
                           }
                         ]
                       })
