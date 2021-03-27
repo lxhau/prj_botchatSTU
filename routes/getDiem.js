@@ -498,6 +498,7 @@ Router.get('/list', function (req, response){
 })
 
 Router.get('/customs', (req, response) => {
+
   try{
     mysql.query(req.query.sql, (err, rows) => {
     if(!err){
