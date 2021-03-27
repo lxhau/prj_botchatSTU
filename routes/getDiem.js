@@ -434,6 +434,7 @@ Router.post('/top', (req, response) => {
       }
 
     }else{
+      console.log(err+"");
      return response.status(200).json({
         "messages": [
           {
@@ -444,6 +445,47 @@ Router.post('/top', (req, response) => {
     }
   })
 
+})
+
+Router.get('/list', function (req, res){
+  mysql.query('SELECT table_name FROM information_schema.tables WHERE table_schema = "stu_mark"', (err, rows) => {
+    if(!err){
+      if(rows.length > 0){
+        var text="";
+        var i=1;
+        rows.forEach(function(item) {
+            text += item.table_name.toUpperCase()+ " \n ";
+            i++;
+        });
+
+        return response.status(200).json({
+          "messages": [
+            {
+              "text": text
+            }
+          ]
+        })
+      }else{
+        return response.status(200).json({
+          "messages": [
+            {
+              "text": "Không có dữ liệu bạn cần"
+            }
+          ]
+        })
+      }
+
+    }else{
+      console.log(err+"");
+     return response.status(200).json({
+        "messages": [
+          {
+            "text": "Server đang cập nhật."
+          }
+        ]
+      });
+    }
+  })
 })
 
 module.exports =Router;
