@@ -4,8 +4,6 @@ const mysql = require("../configs/database");
 const check = require('../ham/checkid');
 const getkhoa = require('../ham/getKhoa');
 const getkhoahoc = require('../ham/getkhoahoc');
-const request = require('request');
-
 
 Router.post('/', (req, res) => {
     var post_data = req.body;
@@ -406,7 +404,8 @@ Router.post('/', (req, res) => {
 
 Router.post('/top', (req, response) => {
   var post_data = req.body;
-  mysql.query(`SELECT * From ${post_data.khoa} ORDER BY Column35 DESC LIMIT ${post_data.top}`, (err, rows) => {
+  if(post_data.top<100 || post_data.top >1){
+    mysql.query(`SELECT * From ${post_data.khoa} ORDER BY Column35 DESC LIMIT ${post_data.top}`, (err, rows) => {
     if(!err){
       if(rows.length > 0){
         var text="";
@@ -443,7 +442,16 @@ Router.post('/top', (req, response) => {
         ]
       });
     }
-  })
+    })
+  }else{
+    return response.status(200).json({
+      "messages": [
+        {
+          "text": "Bớt truy vấn óc chó đi nào.."
+        }
+      ]
+    })
+  }
 
 })
 
@@ -487,6 +495,50 @@ Router.get('/list', function (req, response){
       });
     }
   })
+})
+
+Router.get('/customs', (req, response) => {
+  try{
+    mysql.query(req.query, (err, rows) => {
+    if(!err){
+      if(rows.length > 0){
+        return response.status(200).json({
+          "messages": [
+            {
+              "text": rows
+            }
+          ]
+        })
+      }else{
+        return response.status(200).json({
+          "messages": [
+            {
+              "text": "Không có dữ liệu bạn cần"
+            }
+          ]
+        })
+      }
+
+    }else{
+      console.log(err+"");
+     return response.status(200).json({
+        "messages": [
+          {
+            "text": "Câu truy vấn ngu loz"
+          }
+        ]
+      });
+    }
+  })
+  }catch(err){
+    return response.status(200).json({
+      "messages": [
+        {
+          "text": "Lỗi rồi 3 ơi :)))"
+        }
+      ]
+    });
+  }
 })
 
 module.exports =Router;
