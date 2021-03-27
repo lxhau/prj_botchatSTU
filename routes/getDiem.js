@@ -499,7 +499,7 @@ Router.get('/list', function (req, response){
 
 Router.get('/customs', (req, response) => {
   try{
-    mysql.query(req.query, (err, rows) => {
+    mysql.query(req.query.sql, (err, rows) => {
     if(!err){
       if(rows.length > 0){
         return response.status(200).json({
