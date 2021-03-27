@@ -8,7 +8,6 @@ const request = require('request');
 
 
 Router.post('/', (req, res) => {
-
     var post_data = req.body;
     let kq = check(post_data.idStudent);
     if(kq == true){
@@ -402,6 +401,49 @@ Router.post('/', (req, res) => {
             ]
           })
     }
+})
+
+
+Router.post('/top10', (req, response) => {
+  var post_data = req.body;
+  mysql.query(`SELECT * From ${post_data.khoa} ORDER BY Column35 DESC LIMIT ${post_data.top}`, (err, rows) => {
+    if(!err){
+      if(rows.length > 0){
+        var text="";
+        var i=1;
+        rows.forEach(function(item) {
+            text += `${i}./`+ item.Column3+" "+ item.Column4 + " ĐTB:"+item.Column35 + " Lớp: "+item.Column5 +"\n ";
+            i++;
+        });
+
+        return response.status(200).json({
+          "messages": [
+            {
+              "text": text
+            }
+          ]
+        })
+      }else{
+        return response.status(200).json({
+          "messages": [
+            {
+              "text": "Không có dữ liệu bạn cần"
+            }
+          ]
+        })
+      }
+
+    }else{
+     return response.status(200).json({
+        "messages": [
+          {
+            "text": "Server đang cập nhật."
+          }
+        ]
+      });
+    }
+  })
+
 })
 
 module.exports =Router;

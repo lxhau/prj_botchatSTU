@@ -7,6 +7,12 @@ let mysql = require('mysql');
       password: 'Fsb.Uwnjkg7!d7S',
       database: 'stu_mark',
       port: 3306
+      // multipleStatements: true,
+      //  host: 'localhost',
+      //  user: 'root',
+      //  password: '',
+      //  database: 'stu_mark',
+      //  port: 3306
     });
 
     connection.connect(function(err) {
