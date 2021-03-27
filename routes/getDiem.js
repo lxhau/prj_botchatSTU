@@ -404,7 +404,7 @@ Router.post('/', (req, res) => {
 })
 
 
-Router.post('/top10', (req, response) => {
+Router.post('/top', (req, response) => {
   var post_data = req.body;
   mysql.query(`SELECT * From ${post_data.khoa} ORDER BY Column35 DESC LIMIT ${post_data.top}`, (err, rows) => {
     if(!err){
