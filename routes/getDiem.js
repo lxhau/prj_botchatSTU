@@ -447,14 +447,15 @@ Router.post('/top', (req, response) => {
 
 })
 
-Router.get('/list', function (req, res){
+Router.get('/list', function (req, response){
   mysql.query('SELECT table_name FROM information_schema.tables WHERE table_schema = "stu_mark"', (err, rows) => {
     if(!err){
       if(rows.length > 0){
         var text="";
         var i=1;
+        console.log(rows);
         rows.forEach(function(item) {
-            text += item.table_name.toUpperCase()+ " \n ";
+            text += item.TABLE_NAME+ " \n ";
             i++;
         });
 
